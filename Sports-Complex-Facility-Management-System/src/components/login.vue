@@ -1,10 +1,10 @@
 <template>
     <div class="login-page">
       <form @submit.prevent="login">
-        <label for="username">Username:</label>
+        <label for="username">Username: (admin)</label>
         <input type="text" id="username" v-model="username" required>
   
-        <label for="password">Password:</label>
+        <label for="password">Password: (1234)</label>
         <input type="password" id="password" v-model="password" required>
   
         <button type="submit">Login</button>
@@ -26,7 +26,7 @@
   const login = () => {
     // Your login logic here
     // For example, if login is successful, navigate to home page
-    if (username.value === 'user' && password.value === 'password') {
+    if (username.value === 'admin' && password.value === '1234') {
       router.push('/home'); // Change '/home' to your desired home route
     } else {
       errorMessage.value = 'Invalid username or password';

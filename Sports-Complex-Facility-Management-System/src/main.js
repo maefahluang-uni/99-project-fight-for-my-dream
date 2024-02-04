@@ -3,10 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue'; // Import App.vue
 import LoginComponent from './components/login.vue';
 import HomeComponent from './components/home.vue';
+import ScheduleComponent from './components/schedule.vue'
 
 const routes = [
   { path: '/', component: LoginComponent }, // Set login as the index route
   { path: '/home', component: HomeComponent },
+  { path: '/schedule', component: ScheduleComponent },
+
   // Add more routes if needed
 ];
 

@@ -1,6 +1,6 @@
 <template>
-    <div class="schedule-page">
-      <h1>Welcome to the schedule Page</h1>
+    <div class="accident-page">
+      <h1>Welcome to the accident Page</h1>
       <!-- Your home page content goes here -->
     </div>
   </template>
@@ -19,3 +19,4 @@
     color: #333;
   }
   </style>
+   

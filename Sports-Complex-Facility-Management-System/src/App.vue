@@ -74,7 +74,7 @@ const toggleTapbar = () => {
   top: 20px;
   left: 20px;
   background-color: transparent;
-  color: black;
+  color: white;
   font-size: 1.5rem;
   border: none;
   cursor: pointer;

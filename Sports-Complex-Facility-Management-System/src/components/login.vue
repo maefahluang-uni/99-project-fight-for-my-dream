@@ -1,18 +1,18 @@
 <template>
-    <div class="login-page">
-      <form @submit.prevent="login">
-        <label for="username">Username: (admin)</label>
-        <input type="text" id="username" v-model="username" required>
-  
-        <label for="password">Password: (1234)</label>
-        <input type="password" id="password" v-model="password" required>
-  
-        <button type="submit">Login</button>
-      </form>
-  
-      <p v-if="errorMessage" style="color: red;">{{ errorMessage }}</p>
-    </div>
-  </template>
+  <div class="login-page">
+    <form @submit.prevent="login">
+      <label for="username" class="black-text">Username: (admin)</label>
+      <input type="text" id="username" v-model="username" required>
+
+      <label for="password" class="black-text">Password: (1234)</label>
+      <input type="password" id="password" v-model="password" required>
+
+      <button type="submit" class="black-text">Login</button>
+    </form>
+
+    <p v-if="errorMessage" style="color: red;" class="black-text">{{ errorMessage }}</p>
+  </div>
+</template>
   
   <script setup>
   import { ref } from 'vue';
@@ -35,6 +35,10 @@
   </script>
   
   <style scoped>
+
+.black-text {
+  color: black;
+}
   .login-page {
     text-align: center;
     margin-top: 60px;

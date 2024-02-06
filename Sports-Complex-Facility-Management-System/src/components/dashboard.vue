@@ -4,23 +4,23 @@
     <div class="graphs">
       <div class="graph">
         <h2>Employee Monthly Performance</h2>
-        <canvas id="employee-performance-chart"></canvas>
+        <canvas ref="employeePerformanceChart"></canvas>
       </div>
       <div class="graph">
         <h2>Daily Chemical Report</h2>
-        <canvas id="daily-chemical-chart"></canvas>
+        <canvas ref="dailyChemicalChart"></canvas>
       </div>
       <div class="graph">
         <h2>Daily Accident Report</h2>
-        <canvas id="daily-accident-chart"></canvas>
+        <canvas ref="dailyAccidentChart"></canvas>
       </div>
       <div class="graph">
         <h2>Monthly Severity Report</h2>
-        <canvas id="monthly-severity-chart"></canvas>
+        <canvas ref="monthlySeverityChart"></canvas>
       </div>
       <div class="graph">
         <h2>Daily Maintenance Report</h2>
-        <canvas id="daily-maintenance-chart"></canvas>
+        <canvas ref="dailyMaintenanceChart"></canvas>
       </div>
     </div>
   </div>
@@ -30,9 +30,19 @@
 import { ref, onMounted } from 'vue'; // Assuming Vue 3
 import Chart from 'chart.js/auto'; // Import Chart.js
 
+const employeePerformanceChart = ref(null);
+const dailyChemicalChart = ref(null);
+const dailyAccidentChart = ref(null);
+const monthlySeverityChart = ref(null);
+const dailyMaintenanceChart = ref(null);
+
 onMounted(() => {
+  createCharts();
+});
+
+function createCharts() {
   // Employee Monthly Performance Chart
-  const employeePerformanceChart = new Chart(document.getElementById('employee-performance-chart').getContext('2d'), {
+  employeePerformanceChart.value = new Chart(employeePerformanceChart.value.getContext('2d'), {
     type: 'bar',
     data: {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -54,7 +64,7 @@ onMounted(() => {
   });
 
   // Daily Chemical Report Chart
-  const dailyChemicalChart = new Chart(document.getElementById('daily-chemical-chart').getContext('2d'), {
+  dailyChemicalChart.value = new Chart(dailyChemicalChart.value.getContext('2d'), {
     type: 'line',
     data: {
       labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
@@ -76,7 +86,7 @@ onMounted(() => {
   });
 
   // Daily Accident Report Chart
-  const dailyAccidentChart = new Chart(document.getElementById('daily-accident-chart').getContext('2d'), {
+  dailyAccidentChart.value = new Chart(dailyAccidentChart.value.getContext('2d'), {
     type: 'pie',
     data: {
       labels: ['Minor', 'Major', 'Fatal'],
@@ -98,12 +108,12 @@ onMounted(() => {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false
+      
     }
   });
 
   // Monthly Severity Report Chart
-  const monthlySeverityChart = new Chart(document.getElementById('monthly-severity-chart').getContext('2d'), {
+  monthlySeverityChart.value = new Chart(monthlySeverityChart.value.getContext('2d'), {
     type: 'bar',
     data: {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -125,7 +135,7 @@ onMounted(() => {
   });
 
   // Daily Maintenance Report Chart
-  const dailyMaintenanceChart = new Chart(document.getElementById('daily-maintenance-chart').getContext('2d'), {
+  dailyMaintenanceChart.value = new Chart(dailyMaintenanceChart.value.getContext('2d'), {
     type: 'bar',
     data: {
       labels: ['Machine 1', 'Machine 2', 'Machine 3', 'Machine 4', 'Machine 5'],
@@ -145,7 +155,7 @@ onMounted(() => {
       }
     }
   });
-});
+}
 </script>
 
 <style scoped>

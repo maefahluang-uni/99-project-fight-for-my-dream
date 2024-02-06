@@ -164,8 +164,8 @@ function createCharts() {
   margin-top: 60px;
 }
 
-h1 {
-  color: #333;
+h1, h2 {
+  color: #000;
 }
 
 .graphs {
@@ -183,3 +183,4 @@ h1 {
   margin-top: 0;
 }
 </style>
+

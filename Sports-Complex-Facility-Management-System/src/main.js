@@ -7,11 +7,16 @@ import ScheduleComponent from './components/schedule.vue'
 import AccidentComponent from './components/accident.vue'
 
 
+import DashboardComponent from './components/dashboard.vue'
+
+
 const routes = [
   { path: '/', component: LoginComponent }, // Set login as the index route
   { path: '/home', component: HomeComponent },
   { path: '/schedule', component: ScheduleComponent },
   { path: '/accident', component: AccidentComponent },
+
+  { path: '/dashboard', component: DashboardComponent },
 
   // Add more routes if needed
 ];

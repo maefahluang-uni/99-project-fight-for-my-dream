@@ -130,6 +130,7 @@ function checkOnlyOne(level) {
   padding: 3px 10px;
   border-radius: 5px;
   cursor: pointer;
+  color:black
 }
 
 .minor {

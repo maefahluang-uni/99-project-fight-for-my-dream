@@ -11,7 +11,7 @@ import DashboardComponent from './components/dashboard.vue'
 
 
 const routes = [
-  { path: '/', component: LoginComponent }, // Set login as the index route
+  { path: '/', component: HomeComponent }, // Set login as the index route
   { path: '/home', component: HomeComponent },
   { path: '/schedule', component: ScheduleComponent },
   { path: '/accident', component: AccidentComponent },

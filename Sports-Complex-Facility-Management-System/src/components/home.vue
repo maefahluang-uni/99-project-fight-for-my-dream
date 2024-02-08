@@ -14,6 +14,25 @@
         </div>
       </div>
     </div>
+  </template>
+  
+  <script setup>
+  // Add any setup logic specific to the home page
+  
+  </script>
+  
+  <style scoped>
+  .home-page {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  </style>
+  
+=======
 
     <!-- Second Card -->
     <div class="card">
@@ -86,3 +105,4 @@ export default {
   font-size: 18px;
 }
 </style>
+

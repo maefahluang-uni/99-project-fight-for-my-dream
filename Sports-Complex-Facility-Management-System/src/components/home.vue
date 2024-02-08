@@ -7,6 +7,7 @@
   
   <script setup>
   // Add any setup logic specific to the home page
+  
   </script>
   
   <style scoped>

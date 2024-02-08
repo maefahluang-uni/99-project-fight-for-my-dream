@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@harv46/vue-table": "^0.1.2",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },

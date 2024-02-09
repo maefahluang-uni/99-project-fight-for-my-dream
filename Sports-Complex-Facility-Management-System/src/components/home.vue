@@ -1,4 +1,5 @@
 <template>
+  <div class="home-page">
   <div class="card-container">
     <!-- First Card -->
     <div class="card">
@@ -14,25 +15,6 @@
         </div>
       </div>
     </div>
-  </template>
-  
-  <script setup>
-  // Add any setup logic specific to the home page
-  
-  </script>
-  
-  <style scoped>
-  .home-page {
-    text-align: center;
-    margin-top: 60px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  </style>
-  
-=======
 
     <!-- Second Card -->
     <div class="card">
@@ -63,6 +45,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -104,5 +87,9 @@ export default {
   margin-top:2px;
   font-size: 18px;
 }
-</style>
 
+.home-page {
+  text-align: center;
+  margin-top: 60px;
+}
+</style>

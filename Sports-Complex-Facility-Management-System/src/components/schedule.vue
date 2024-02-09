@@ -93,6 +93,5 @@ h1 {
   padding: 50px;
 }
 </style>
-=======
-  </style>
+
   
